@@ -1,0 +1,8 @@
+{
+  "name": "Talk Advisor2",
+  "description": "An AI-powered communication training app that analyzes your speech across various scenarios like interviews, presentations, and sales, providing expert feedback and before/after improvements.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

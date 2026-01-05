@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Copy of Copy of Talk Advisor",
+  "description": "An AI-powered communication evaluation app that analyzes your speech and video to provide professional feedback on clarity, confidence, and tone.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
