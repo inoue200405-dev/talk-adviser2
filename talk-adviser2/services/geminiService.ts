@@ -9,7 +9,7 @@ export const analyzeSpeech = async (
   const API_KEY = "AIzaSyA2h34aimnULFhIYCLNQw94IghnlUJWog0";
 
   // 2. 重要：バージョンを「v1beta」に、モデル名を「gemini-1.5-flash」にします
-  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
 
   const prompt = `あなたはプロの話し方講師です。以下の発言を分析し、必ずJSON形式で答えてください。
   発言: "${text}"
