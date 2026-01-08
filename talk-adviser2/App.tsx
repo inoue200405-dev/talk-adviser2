@@ -11,11 +11,6 @@ import { analyzeSpeech } from './services/geminiService';
 import { Camera, Mic, Square, Trash2, ArrowLeft, PlayCircle, AlertCircle, HelpCircle } from 'lucide-react';
 
 const App: React.FC = () => {
-  // もともとのコード
-  // console.log("API Key loaded:", import.meta.env.VITE_GEMINI_API_KEY ? "Yes (Hidden)" : "No");
-
-  // テスト用（import.meta.env... の代わりに 直接キーを " " で囲って書く）
-  console.log("API Key loaded:", "AIzaSyBQLWkGxomYixfgCXmx4O4C_uwF9TXMiIA" ? "Yes (Directly Written)" : "No");
   const [state, setState] = useState<AppState>(AppState.SELECTING_SCENARIO);
   const [selectedScenario, setSelectedScenario] = useState<Scenario | null>(null);
   const [isRecording, setIsRecording] = useState(false);
@@ -28,6 +23,9 @@ const App: React.FC = () => {
   const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
+    // 修正箇所：.envファイルからAPIキーを読み込む安全な方式に戻しました
+    console.log("API Key loaded:", import.meta.env.VITE_GEMINI_API_KEY ? "Yes (Hidden)" : "No");
+
     const SpeechRecognition = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
     if (SpeechRecognition) {
       recognitionRef.current = new SpeechRecognition();

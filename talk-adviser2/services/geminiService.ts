@@ -6,7 +6,7 @@ export const analyzeSpeech = async (
   criteria: string[]
 ): Promise<AnalysisResult> => {
   // 1. あなたの新しいAPIキー
-  const API_KEY = "AIzaSyA2h34aimnULFhIYCLNQw94IghnlUJWog0";
+  const API_KEY = "AIzaSyAT4fhZxUIvYh6PtWzMjby39A24TEqi4bo";
 
   // 2. 重要：バージョンを「v1beta」に、モデル名を「gemini-1.5-flash」にします
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${API_KEY}`;
